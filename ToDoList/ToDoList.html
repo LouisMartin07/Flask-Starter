@@ -14,22 +14,60 @@
             height: 100vh;
             margin: 0;
         }
+        .box {
+            width: 300px; /* Width of the box */
+            height: 2px; /* Height of the box */
+            background-color: lightblue; /* Background color of the box */
+            border: 2px solid navy; /* Border around the box */
+            margin: 2px; /* Space around the box */
+            padding: 10px; /* Space inside the box, around its content */
+            display: flex; /* Makes the box a flex container */
+            align-items: center; /* Vertically center the content inside the box */
+            justify-content: center; /* Horizontally center the content inside the box */
+            text-align: center; /* Ensures text inside is centered, useful if text wraps */
+        }
+        h1 {
+            text-align:center;
+        }
+        .checked {
+            text-decoration: line-through;
+            color: grey;
+        }
     </style>
 </head>
-    <body>
+<body>
+    <h1>
+        Welcome to the task manager
+    </h1>
+    <p>
+        <b>If you would like to add a new item, please enter it below</b>
+    </p>
+    
+    <div class="box">Sample Text</div>
+    <button onclick="addItem(this)">Add</button>
+    
+    <div>
         <ol>
-            <li>Design the template files</li>
-            <ol>
-                <li>Start with the <a href="templates/login.html">log in</a> & <a href="templates/signup.html">sign up</a> pages</li>
-                <ol>
-                    <li>impliment the functionality</li>
-                    <li>design the page</li>
-                </ol>
-            </ol>
-            <li>Add functionality to each file</li>
-            <li>Learn more about what to include in the app.py file</li>
-            <li>Learn more about implimenting the site</li>
+            <li class="list-item">Design the template files
+                <button onclick="checkOff(this)">Complete</button></li>
+            <li class="list-item">Add functionality to each file
+                <button onclick="checkOff(this)">Complete</button></li>
+            <li class="list-item">Learn more about what to include in the app.py file 
+                <button onclick="checkOff(this)">Complete</button></li>
+            <li class="list-item">Learn more about implementing the site 
+                <button onclick="checkOff(this)">Complete</button></li>
         </ol>
+    </div>
 
-    </body>
+    <script>
+        function checkOff(button) {
+            button.parentElement.classList.toggle('checked');
+        }
+        function addItem(button) {
+            button.parentElement.classList.addItem('added')
+        }
+    </script>
+
+</body>
 </html>
+
