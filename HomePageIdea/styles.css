@@ -1,0 +1,102 @@
+/* Style the navbar */
+#navbar {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  /* Navbar links */
+  #navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 25px; /* how much to seperate each link by */
+    text-decoration: none; /* gets rid of underline for each link */
+  }
+  
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    width: 100%; /* Or specify your desired width */
+    height: 60vh; /* Or specify your desired height */
+}
+
+/* Add divider style */
+.divider {
+    border-top: 75px solid black; /* Example: Black horizontal line */
+    margin: 20px 0; /* Adjust margin as needed */
+}
+
+
+
+.slideshow-container {
+    display: flex;
+    justify-content: space-around; /* Distributes space around the items */
+    align-items: center; /* Align items vertically */
+    width: 100%; /* Takes full width of the parent */
+}
+/* Adjusting the rotating elements at the bottom*/
+.globeslideshow {
+    width: 300px;
+    height: 200px;
+    background-size: contain; /* Ensure the background image fits within the container */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center; /* Center the background image */
+    animation: globeCycle 20s infinite; 
+}
+  
+@keyframes globeCycle {
+    0% { background-image: url("img's/Africa.jpg"); }
+    25% { background-image: url("img's/NA.jpg"); } 
+    50% { background-image: url("img's/SA.jpg"); } 
+    75% { background-image: url("img's/asia.jpg"); }
+    100% { background-image: url("img's/Ausi.jpg"); }
+}
+
+.foodslideshow {
+    width: 300px;
+    height: 200px;
+    background-size: contain; /* Ensure the background image fits within the container */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center; /* Center the background image */
+    animation: foodCycle 20s infinite; 
+}
+
+@keyframes foodCycle {
+    0% { background-image: url("img's/mexican.webp"); }
+    25% { background-image: url("img's/the-best-top-10-indian-dishes.jpg"); } 
+    50% { background-image: url("img's/wang1.jpg"); } 
+    75% { background-image: url("img's/american.jpg"); }
+    100% { background-image: url("img's/shutterstock_1092313190.jpg"); }
+}
+
+  .slideshow-wrapper {
+    position: relative; /* Establishes a positioning context */
+    width: 300px; /* Match the slideshow dimensions */
+    height: 200px;
+    margin: 0 10px; /* Optional: Adds some space between slideshows */
+}
+
+/* Style for the overlay text */
+.slideshow-text {
+    position: absolute; /* Absolutely positioned relative to its parent */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjusts the positioning to truly center the text */
+    color: black;
+    font-size: 20px; 
+    text-align: center; 
+}
+
+
